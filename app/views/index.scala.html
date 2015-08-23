@@ -1,7 +1,17 @@
-@(message: String)
+<!DOCTYPE html>
+<html ng-controller="globalContextController">
 
-@main("Welcome to Play") {
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    @helper.requireJs(
+    core = routes.Assets.at("lib/requirejs/require.js").url,
+    module = routes.Assets.at("javascripts/main").url
+    )
+    <title ng-bind="context.title"></title>
+</head>
 
-    @play20.welcome(message)
+<body>
+  <p>Hello world!!!!</p>
+</body>
 
-}
+</html>
